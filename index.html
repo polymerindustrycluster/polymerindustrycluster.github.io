@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PIC Open — Polymer Industry Cluster</title>
+<meta name="description" content="Open data, methods, and tools from the Polymer Industry Cluster of Northeast Ohio.">
+<style>
+  /* Palette and voice match the evidence-room artifacts: teal/orange/magenta categorical,
+     charcoal ink, generous measure. One file, no dependencies, so the page cannot break. */
+  :root{
+    --teal:#008BA8; --orange:#C85F0C; --magenta:#A32A78;
+    --ink:#2B2C2A; --body:#3D4142; --muted:#6D6E6A; --line:#D5D8D7; --bg:#FDFDFC;
+  }
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--bg);color:var(--body);font:17px/1.65 Georgia,'Times New Roman',serif}
+  .wrap{max-width:820px;margin:0 auto;padding:0 28px}
+  header{padding:72px 0 40px;border-bottom:3px solid var(--ink)}
+  .kicker{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;font-weight:700;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+  h1{font-size:44px;line-height:1.12;color:var(--ink);margin:14px 0 18px;font-weight:700}
+  .stand{font-size:20px;max-width:62ch}
+  section{padding:44px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;font-weight:700;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+  .card{display:block;text-decoration:none;color:inherit;padding:22px 0;
+    border-top:1px solid var(--line)}
+  .card:first-of-type{border-top:none;padding-top:0}
+  .card h3{font-size:24px;color:var(--ink);margin-bottom:6px}
+  .card h3 span{color:var(--accent,var(--teal))}
+  .card p{max-width:64ch}
+  .card .go{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;font-weight:700;
+    color:var(--accent,var(--teal));margin-top:8px;display:inline-block}
+  .card:hover h3{text-decoration:underline;text-decoration-color:var(--accent,var(--teal));
+    text-underline-offset:4px}
+  .soon{padding:22px 0;border-top:1px solid var(--line);color:var(--muted)}
+  .soon b{color:var(--body)}
+  .method{background:#F1F2F0;border-left:4px solid var(--teal);padding:20px 24px;margin:8px 0}
+  .method p{max-width:64ch}
+  footer{padding:40px 0 72px;font-size:14px;color:var(--muted)}
+  footer a{color:var(--teal)}
+  @media (max-width:640px){h1{font-size:32px}.stand{font-size:18px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <p class="kicker">Polymer Industry Cluster · Northeast Ohio</p>
+  <h1>The work, with the working shown.</h1>
+  <p class="stand">Open data, methods, and tools from the industry cluster organization for
+  the densest polymer manufacturing region in the United States. Every figure names its
+  source, its exact filters, and the script that fetched it.</p>
+  <p class="stand" style="font-size:16px;color:var(--muted);margin-top:14px">This
+  organization was created in August 2026. The repositories below are in preparation —
+  they will arrive with their methods attached rather than ahead of them.</p>
+</div></header>
+
+<section><div class="wrap">
+  <h2>Projects</h2>
+
+  <!-- Cards are inert until their repo ships. A live link to a 404 is worse than an
+       honest "not yet" — swap each div to <a href="/slug/"> when the repo goes public. -->
+  <div class="card" style="--accent:var(--teal)">
+    <h3><span>The Evidence Room</span> — data journalism on the regional polymer economy</h3>
+    <p>Employment, wages, patents, research reach, and talent — each page carrying a
+    methodology block, a limitations section, and a re-runnable claims file. When a number
+    moves, the page fails loudly instead of drifting quietly.</p>
+    <span class="go">In preparation</span>
+  </div>
+
+  <a class="card" href="https://picinnovation.org/catena" style="--accent:var(--orange)">
+    <h3><span>Catena</span> — a game about polymer chains</h3>
+    <p>Chemistry you can play in a browser. Built for outreach; the source will be opened
+    here.</p>
+    <span class="go">Play it now →</span>
+  </a>
+
+  <div class="card" style="--accent:var(--magenta)">
+    <h3><span>pic-charts</span> — publication-grade charting</h3>
+    <p>The Python package behind our figures: takeaway titles, direct labels, accessible
+    data exports, and validation gates that refuse to ship a chart with colliding labels or
+    unreviewed alt text. Indebted to the Urban Institute's data visualization style
+    guidance.</p>
+    <span class="go">In preparation</span>
+  </div>
+
+  <div class="soon"><b>Also planned:</b> the canonical cluster footprint definitions, an
+  SBIR/STTR award map, an atlas of polymer degree programs and research groups, a curated
+  list of public data sources for measuring a materials economy, and conference and
+  cluster-health tooling.</div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>How to trust this</h2>
+  <div class="method">
+    <p><b>Reproduce it.</b> Each analysis publishes the API endpoint, the exact filter
+    values, and the fetch script. Run the script and you get the same bytes we did.</p>
+  </div>
+  <div class="method" style="border-color:var(--orange)">
+    <p><b>Falsify it.</b> Every published sentence is backed by an assertion that re-runs
+    against the data that produced it, with a stated condition that would make it wrong.</p>
+  </div>
+  <div class="method" style="border-color:var(--magenta)">
+    <p><b>Argue with it.</b> Found an error? Open an issue on the repository. Corrections
+    are dated and public — silent edits are forbidden by our own methods policy.</p>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <p>The Polymer Industry Cluster is convened by the
+  <a href="https://greaterakronchamber.org">Greater Akron Chamber</a>.
+  Main site: <a href="https://polymerindustrycluster.org">polymerindustrycluster.org</a> ·
+  Innovation programs: <a href="https://picinnovation.org">picinnovation.org</a></p>
+  <p style="margin-top:10px">Analyses here are working research by PIC staff, not official
+  statistics. Limitations are stated on every page. Some pages were built with AI
+  assistance; every page says exactly what was checked and how.</p>
+</div></footer>
+</body>
+</html>
