@@ -1,21 +1,19 @@
-# PIC Open — organization landing site
+# polymerindustrycluster.github.io
 
-The front door for PIC's public GitHub presence. One static page, no dependencies, in the
-visual language of the Evidence Room.
+The landing page for the Polymer Industry Cluster's public work, served at
+**https://polymerindustrycluster.github.io/**. One static file, no dependencies.
 
-**Repo naming requirement:** for this to serve at the org's root URL, this repository must
-be named exactly `polymerindustrycluster.github.io` (replace polymerindustrycluster with the actual org handle). Any
-other name and it becomes a project site at `/org-site/` instead.
+The site is deployed straight from `main` by GitHub Pages — a push to `main` is a publish.
 
-**Before first deploy:**
-1. Rename the repo to `polymerindustrycluster.github.io`.
-2. Replace the one `https://github.com/polymerindustrycluster/...` link in `index.html`.
-3. Settings → Pages → Source: GitHub Actions (or deploy-from-branch `main`, root — this
-   site is plain enough that either works).
-4. Optional custom domain: add a `CNAME` record at the DNS host pointing
-   `lab.picinnovation.org` (or the chosen subdomain) to `polymerindustrycluster.github.io`, then set the
-   custom domain in Settings → Pages and enforce HTTPS. Verify the domain at the org level
-   first (Settings → Verified domains) so no one else can claim it.
+## Editing
 
-Project sites (evidence-room, catena) automatically appear under the same domain as
-`/evidence-room/`, `/catena/` — the root-relative links on this page already point there.
+`index.html` is the whole site. Project cards for repositories that have not yet been
+published are plain `<div class="card">` elements marked "In preparation"; when a
+repository goes public, change its card to `<a class="card" href="/repo-name/">` and it
+becomes a live link. There is a comment in the file at that spot.
+
+## Licensing
+
+The prose and design of this page are licensed under [CC BY 4.0](LICENSE). The Polymer
+Industry Cluster and Greater Akron Chamber names and marks are trademarks and are not
+covered by that license.
